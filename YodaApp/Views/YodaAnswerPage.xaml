@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YodaApp.Views.YodaAnswerPage"
+             Title="YodaAnswerPage">
+    <StackLayout Padding="20">
+        <Label 
+        Text="Yoda's Fun Facts"
+        FontSize="24"
+        FontAttributes="Bold"
+        HorizontalOptions="Center" />
+        <Label 
+        x:Name="FunFactLabel"
+        Text="{Binding Response.Content}"
+        FontSize="18"
+        HorizontalOptions="Center"
+        VerticalOptions="CenterAndExpand" />
+        <Button 
+        Text="Get Fun Fact"
+        Command="{Binding GetResponsesCommand}"
+        FontSize="18"
+        HorizontalOptions="Center"
+        VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>
